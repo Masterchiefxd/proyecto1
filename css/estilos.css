@@ -1,0 +1,148 @@
+:root {
+	--rojo: #09e540;
+	--fondo:  rgb(0, 60, 255);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: var(--fondo);
+	font-family: 'Open Sans', sans-serif;
+}
+
+.contenedor {
+	width: 90%;
+	margin: auto;
+}
+
+header {
+	padding: 60px 0;
+}
+
+header .contenedor {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header .logotipo {
+	font-family: 'Bebas Neue', cursive;
+	font-weight: normal;
+	color: var(--rojo);
+	font-size: 40px;
+}
+
+header{
+    width: 100%;
+    height: 50px;
+    background: #0178f8;
+}
+
+.menu{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    perspective: 200px;
+}
+
+.menu ul{
+    display: flex;
+    margin: auto;
+}
+
+.menu li{
+    list-style: none;
+    padding: 15px 20px;
+}
+
+.menu li:hover{
+    background: rgba(0,0,0,0.3);
+    color: white;
+    cursor: pointer;
+    transition: all 300ms;    
+}
+
+.menu ul li ul{
+    *display: none;
+    flex-direction: column;
+    position: absolute;
+    background: #58b813;
+    margin-top: 15px;
+    transform: rotateY(240deg) scale(0);
+    transition: all 1s;
+    box-shadow: 1px 1px 10px 0px black;
+}
+
+.menu ul li:hover > ul{
+    transform: rotateY(0deg) scale(1);
+    transition: all 1s;
+}
+
+.menu ul li ul:before{
+    content: '';
+    width: 0;
+    height: 0;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-bottom: 8px solid #58b813;
+    position: absolute;
+    margin-top: -8px;
+    margin-left: 20px;
+}
+
+.menu ul li ul li ul li{
+    position: relative;
+}
+.menu ul li ul li:hover > ul{
+    transform: rotateY(0deg) scale(1);
+}
+
+.menu ul li ul li ul{
+    right: -90px;
+    top: 36px;
+    background: #b87113;
+}
+
+.menu ul li ul li ul:before{
+    position: absolute;
+    border-bottom: 8px solid #b87113;
+    margin-top: 18px;
+    margin-left: -14px;
+    transform: rotate(-90deg);
+}
+
+/* ---- ----- -----  Principal ----- ----- ----- */
+.principal {
+	font-size: 16px;
+	min-height: 40.62em;
+	color: #fff;
+	background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0,0,0,.50) 100%), url(../img/img4.jpg);
+	background-position: center center;
+	background-size: cover;
+	margin-bottom: 3.12em;
+	display: flex;
+	align-items: end;
+}
+
+.principal .contenedor {
+	margin: 0 auto;
+	margin-bottom: 6.25em;
+}
+
+.principal .titulo {
+	font-weight: 600;
+	font-size: 3.12em;
+	margin-bottom: 0.4em;
+}
+
+.principal .descripcion {
+	font-weight: normal;
+	font-size: 1em;
+	line-height: 1.75em;
+	max-width: 100%;
+	margin-bottom: 1.25em;
+}
